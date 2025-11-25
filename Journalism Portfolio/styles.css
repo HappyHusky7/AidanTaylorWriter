@@ -1,0 +1,192 @@
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #212529; /* Dark Charcoal Text */
+    background-image: linear-gradient(rgba(10, 76, 106, 0.7), rgba(10, 76, 106, 0.7)), url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+}
+
+#page-background {
+    position: relative;
+    width: 60%;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    margin: 0 auto; /* Center the div */
+    background-color: rgba(255, 255, 255, 0.9); /* White with 10% transparency */
+    z-index: 1; /* Ensure it's above the background image */
+    padding-bottom: 50px; /* Add some padding to the bottom */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Header Styles */
+header {
+    background-color: transparent; /* Header is now transparent */
+    color:  #0A4C6A; /* Dark Blue */
+    padding: 6rem 0; /* Increased padding for more height */
+    text-align: center;
+    border-bottom: 4px solid #00A7A8;
+    /* Accent Color: Vibrant Turquoise */
+    position: relative; /* Needed for potential future pseudo-elements */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Subtitle styles within the header */
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 300; /* Lighter font weight */
+    color: #0A4C6A; /* Same as h1 for consistency */
+    margin: 0.5rem 0 0; /* Space above, no space below */
+    border: none; /* Remove the general h2 border */
+    padding: 0; /* Remove the general h2 padding */
+}
+
+/* Main content wrapper for consistent centering and max-width */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Introduction Section - designed as a central profile block */
+.introduction-layout {
+    display: flex;
+    flex-direction: column; /* Stack images above text */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    max-width: 800px;
+    /* Max width for the intro block */
+    margin: 2rem auto; /* Center the block and add vertical spacing */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+    gap: 1.5rem; /* Space between image block and text block */
+}
+
+/* Container for the introduction text */
+.intro-text {
+    /* Resetting previous flex properties */
+    flex: none;
+    min-width: auto;
+    max-width: 600px; /* Keep text lines readable */
+}
+
+/* Target paragraphs inside the new container */
+.intro-text p {
+    margin-bottom: 1rem; /* Slightly more space between paragraphs */
+    font-size: 1.1rem; /* Slightly larger font for readability */
+}
+
+/* Introduction Image Styles */
+.intro-images {
+    display: flex;
+    flex-direction: row; /* Display images side-by-side */
+    gap: 15px; /* Gap between images */
+    justify-content: center; /* Center images horizontally */
+    /* Resetting previous flex properties */
+    flex-basis: auto;
+    flex-grow: auto;
+    flex-shrink: auto;
+}
+
+.intro-images img {
+    width: 120px; /* Fixed width for profile-like images */
+    height: 120px; /* Fixed height for profile-like images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 50%; /* Make images circular */
+    border: 3px solid #00A7A8; /* Accent color border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+h2 {
+    color: #0A4C6A; /* Primary Color: Deep Blue */
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 10px;
+    text-align: center; /* Center section titles */
+    margin-top: 3rem; /* More space above titles */
+    margin-bottom: 1.5rem; /* Space below titles */
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: none; /* Remove gradient */
+    background-color: #eee; /* Simple light grey line */
+    margin: 2rem auto; /* Center and add vertical spacing */
+    max-width: 60%; /* Shorter line for subtlety */
+}
+
+
+/* Article Styles */
+article {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* More subtle shadow */
+}
+
+article h3 {
+    margin-top: 0;
+    color: #0A4C6A; /* Primary Color: Deep Blue */
+}
+
+/* Read More link styling - more subtle */
+.read-more {
+    display: inline; /* Make it behave like a text link */
+    margin-top: 1rem;
+    background-color: transparent; /* No background */
+    color: #0A4C6A; /* Use primary color for text */
+    padding: 0; /* Remove padding */
+    text-decoration: none;
+    border-radius: 0; /* No border radius */
+    border-bottom: 1px solid #0A4C6A; /* Underline with primary color */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.read-more:hover {
+    background-color: transparent; /* No background on hover */
+    color: #007B7C; /* Darker accent on hover */
+    border-color: #007B7C; /* Darker border on hover */
+}
+
+/* .article-image styles removed */
+
+
+/* Footer Styles (already good) */
+
+/* No changes needed for footer based on authory.com style */
+
+/* Responsive Design for Mobile Friendliness */
+@media (max-width: 768px) {
+    #page-background {
+        width: 95%; /* Use more screen width on smaller devices */
+    }
+
+    header {
+        padding: 3rem 0; /* Reduce header padding */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Decrease main title font size */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Decrease subtitle font size */
+    }
+
+    main {
+        margin: 1rem auto; /* Reduce top/bottom margin */
+    }
+}
